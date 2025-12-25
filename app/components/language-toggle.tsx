@@ -70,7 +70,7 @@ export function LanguageToggle({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 w-48 bg-background border border-input rounded-md shadow-lg max-h-80 overflow-y-auto">
+        <div className="absolute top-full mt-2 right-0 w-48 bg-white border border-input rounded-md shadow-lg max-h-80 overflow-y-auto z-50">
           {LANGUAGES.map((language) => (
             <button
               key={language.code}
@@ -78,7 +78,7 @@ export function LanguageToggle({
                 onLocaleChange(language.code);
                 setIsOpen(false);
               }}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-popover-foreground hover:bg-accent hover:text-accent-foreground transition-colors  ${
+              className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-accent hover:text-accent-foreground transition-colors  ${
                 currentLocale === language.code ? "bg-accent/50" : ""
               }`}
             >
